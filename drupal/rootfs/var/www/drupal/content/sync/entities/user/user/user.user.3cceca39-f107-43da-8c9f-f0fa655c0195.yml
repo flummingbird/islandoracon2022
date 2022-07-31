@@ -1,0 +1,59 @@
+uuid:
+  -
+    value: 3cceca39-f107-43da-8c9f-f0fa655c0195
+langcode:
+  -
+    value: en
+preferred_langcode:
+  -
+    value: en
+preferred_admin_langcode: {  }
+name:
+  -
+    value: admin
+mail:
+  value: example@example.com
+timezone:
+  -
+    value: America/Halifax
+status:
+  value: '1'
+created:
+  -
+    value: '2022-07-30T21:00:03+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2022-07-31T14:41:40+00:00'
+    format: 'Y-m-d\TH:i:sP'
+access:
+  -
+    value: '2022-07-31T14:48:35+00:00'
+    format: 'Y-m-d\TH:i:sP'
+login:
+  -
+    value: '2022-07-31T14:42:57+00:00'
+    format: 'Y-m-d\TH:i:sP'
+init:
+  -
+    value: webmaster@localhost.com
+roles:
+  - authenticated
+  - administrator
+  - fedoraadmin
+default_langcode:
+  -
+    value: true
+path:
+  -
+    alias: null
+    pid: null
+    langcode: en
+user_picture: {  }
+_content_sync:
+  entity_type: user
+  entity_dependencies: {  }
+pass:
+  -
+    value: $S$EzdXBcTGDB7urBAg/T.QRk.DeFK.jkPnWcbIDXTcj9w/hKk/86HL
+    pre_hashed: true

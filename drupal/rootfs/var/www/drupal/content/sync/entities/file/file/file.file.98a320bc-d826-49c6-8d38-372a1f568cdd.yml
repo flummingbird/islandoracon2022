@@ -1,0 +1,42 @@
+uuid:
+  -
+    value: 98a320bc-d826-49c6-8d38-372a1f568cdd
+langcode:
+  -
+    value: en
+uid:
+  -
+    target_type: user
+    target_uuid: 3cceca39-f107-43da-8c9f-f0fa655c0195
+filename:
+  -
+    value: '1-Service File.jpg'
+uri:
+  -
+    value: 'public://2022-07/1-Service File.jpg'
+    url: /sites/default/files/2022-07/1-Service%20File.jpg
+filemime:
+  -
+    value: image/jpeg
+filesize:
+  -
+    value: 358399
+status:
+  -
+    value: true
+created:
+  -
+    value: '2022-07-31T14:20:33+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2022-07-31T14:20:33+00:00'
+    format: 'Y-m-d\TH:i:sP'
+sha1:
+  -
+    value: e20e336078cfbf1441cf068c4d5aca6497d7c4ae
+_content_sync:
+  entity_type: file
+  entity_dependencies:
+    user:
+      - user.user.3cceca39-f107-43da-8c9f-f0fa655c0195

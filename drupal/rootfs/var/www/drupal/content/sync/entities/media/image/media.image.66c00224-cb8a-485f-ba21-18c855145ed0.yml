@@ -1,0 +1,93 @@
+uuid:
+  -
+    value: 66c00224-cb8a-485f-ba21-18c855145ed0
+langcode:
+  -
+    value: en
+bundle:
+  -
+    target_id: image
+    target_type: media_type
+    target_uuid: 1db3e594-81f2-4a8f-84cb-1a4f28e2964e
+revision_created:
+  -
+    value: '2022-07-31T14:41:40+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user:
+  -
+    target_type: user
+    target_uuid: 3cceca39-f107-43da-8c9f-f0fa655c0195
+revision_log_message: {  }
+status:
+  -
+    value: true
+uid:
+  -
+    target_type: user
+    target_uuid: 3cceca39-f107-43da-8c9f-f0fa655c0195
+name:
+  -
+    value: 'Default thumbnail'
+thumbnail:
+  -
+    alt: 'Default thumbnail'
+    title: null
+    width: 128
+    height: 128
+    target_type: file
+    target_uuid: b5aa4460-a918-4773-ac67-8afe4bd6f8da
+created:
+  -
+    value: '2020-11-11T16:10:20+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2022-07-30T21:00:38+00:00'
+    format: 'Y-m-d\TH:i:sP'
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+content_translation_source:
+  -
+    value: und
+content_translation_outdated:
+  -
+    value: false
+field_file_size:
+  -
+    value: 5137
+field_height:
+  -
+    value: 128
+field_media_image:
+  -
+    alt: 'Default thumbnail'
+    title: ''
+    width: 128
+    height: 128
+    target_type: file
+    target_uuid: b5aa4460-a918-4773-ac67-8afe4bd6f8da
+field_media_of: {  }
+field_media_use:
+  -
+    target_type: taxonomy_term
+    target_uuid: 821d3773-304f-4579-8305-1831f8b94f71
+field_mime_type:
+  -
+    value: image/png
+field_original_name: {  }
+field_width:
+  -
+    value: 128
+_content_sync:
+  entity_type: media
+  entity_dependencies:
+    user:
+      - user.user.3cceca39-f107-43da-8c9f-f0fa655c0195
+    file:
+      - file.file.b5aa4460-a918-4773-ac67-8afe4bd6f8da
+    taxonomy_term:
+      - taxonomy_term.islandora_media_use.821d3773-304f-4579-8305-1831f8b94f71

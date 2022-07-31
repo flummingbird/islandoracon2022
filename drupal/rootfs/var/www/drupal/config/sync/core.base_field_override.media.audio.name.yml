@@ -1,0 +1,22 @@
+uuid: 52fedbbd-d956-4906-8bf5-d096e667a9b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.audio
+_core:
+  default_config_hash: 3WLLqnUkB2L1I0zrqorLpcwe4eti11D9p6XOK2qxdcg
+id: media.audio.name
+field_name: name
+entity_type: media
+bundle: audio
+label: Name
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

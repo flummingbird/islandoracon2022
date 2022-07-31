@@ -1,0 +1,95 @@
+uuid:
+  -
+    value: 2c614703-7160-4e83-a60e-02d92b67aaa7
+langcode:
+  -
+    value: en
+bundle:
+  -
+    target_id: image
+    target_type: media_type
+    target_uuid: 1db3e594-81f2-4a8f-84cb-1a4f28e2964e
+revision_created:
+  -
+    value: '2022-07-31T14:41:40+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log_message: {  }
+status:
+  -
+    value: true
+uid:
+  -
+    target_type: user
+    target_uuid: 3cceca39-f107-43da-8c9f-f0fa655c0195
+name:
+  -
+    value: '1-Thumbnail Image.jpg'
+thumbnail:
+  -
+    alt: '1-Thumbnail Image.jpg'
+    title: null
+    width: 100
+    height: 93
+    target_type: file
+    target_uuid: b70ad207-9c44-4f13-9a0d-f106053e77e1
+created:
+  -
+    value: '2022-07-31T14:20:33+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2022-07-31T14:20:33+00:00'
+    format: 'Y-m-d\TH:i:sP'
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+content_translation_source:
+  -
+    value: und
+content_translation_outdated:
+  -
+    value: false
+field_file_size:
+  -
+    value: 6910
+field_height:
+  -
+    value: 93
+field_media_image:
+  -
+    alt: '1-Thumbnail Image.jpg'
+    title: null
+    width: 100
+    height: 93
+    target_type: file
+    target_uuid: b70ad207-9c44-4f13-9a0d-f106053e77e1
+field_media_of:
+  -
+    target_type: node
+    target_uuid: a30c078b-a51e-4097-85a8-bcfa4789429a
+field_media_use:
+  -
+    target_type: taxonomy_term
+    target_uuid: 821d3773-304f-4579-8305-1831f8b94f71
+field_mime_type:
+  -
+    value: image/jpeg
+field_original_name: {  }
+field_width:
+  -
+    value: 100
+_content_sync:
+  entity_type: media
+  entity_dependencies:
+    user:
+      - user.user.3cceca39-f107-43da-8c9f-f0fa655c0195
+    file:
+      - file.file.b70ad207-9c44-4f13-9a0d-f106053e77e1
+    node:
+      - node.islandora_object.a30c078b-a51e-4097-85a8-bcfa4789429a
+    taxonomy_term:
+      - taxonomy_term.islandora_media_use.821d3773-304f-4579-8305-1831f8b94f71

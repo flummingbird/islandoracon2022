@@ -1,0 +1,42 @@
+uuid:
+  -
+    value: 2286aeda-75c0-44d8-bfeb-12bb4dcd534b
+langcode:
+  -
+    value: en
+uid:
+  -
+    target_type: user
+    target_uuid: 3cceca39-f107-43da-8c9f-f0fa655c0195
+filename:
+  -
+    value: sample.pdf
+uri:
+  -
+    value: 'fedora://2022-07/sample.pdf'
+    url: /_flysystem/fedora/2022-07/sample.pdf
+filemime:
+  -
+    value: application/pdf
+filesize:
+  -
+    value: 3028
+status:
+  -
+    value: true
+created:
+  -
+    value: '2022-07-31T14:44:59+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2022-07-31T14:45:07+00:00'
+    format: 'Y-m-d\TH:i:sP'
+sha1:
+  -
+    value: bfd009f500c057195ffde66fae64f92fa5f59b72
+_content_sync:
+  entity_type: file
+  entity_dependencies:
+    user:
+      - user.user.3cceca39-f107-43da-8c9f-f0fa655c0195

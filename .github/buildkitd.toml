@@ -1,0 +1,4 @@
+[worker.oci]
+  enabled = true
+  max-parallelism = 4
+  platforms = [ "linux/amd64", "linux/arm64" ]

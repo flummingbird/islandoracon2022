@@ -1,0 +1,100 @@
+uuid:
+  -
+    value: 65808367-a7b7-495d-b213-4b0e4319d54d
+langcode:
+  -
+    value: en
+bundle:
+  -
+    target_id: document
+    target_type: media_type
+    target_uuid: f80038fb-bd63-4fc7-b9bd-f646dc8322f6
+revision_created:
+  -
+    value: '2022-07-31T14:45:07+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user:
+  -
+    target_type: user
+    target_uuid: 3cceca39-f107-43da-8c9f-f0fa655c0195
+revision_log_message: {  }
+status:
+  -
+    value: true
+uid:
+  -
+    target_type: user
+    target_uuid: 3cceca39-f107-43da-8c9f-f0fa655c0195
+name:
+  -
+    value: 'Sample Document'
+thumbnail:
+  -
+    alt: ''
+    title: null
+    width: 180
+    height: 180
+    target_type: file
+    target_uuid: 5a0c1887-4506-4472-850c-866cfe34e8c3
+created:
+  -
+    value: '2022-07-31T14:43:43+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2022-07-31T14:45:07+00:00'
+    format: 'Y-m-d\TH:i:sP'
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+path:
+  -
+    alias: null
+    pid: null
+    langcode: en
+content_translation_source:
+  -
+    value: und
+content_translation_outdated:
+  -
+    value: false
+field_file_size:
+  -
+    value: 3028
+field_media_document:
+  -
+    display: true
+    description: ''
+    target_type: file
+    target_uuid: 2286aeda-75c0-44d8-bfeb-12bb4dcd534b
+field_media_of:
+  -
+    target_type: node
+    target_uuid: 934a2466-7c8c-4344-b021-ff405685bb79
+field_media_use:
+  -
+    target_type: taxonomy_term
+    target_uuid: 27f2b03b-45e2-4822-a696-b79effb6d9bd
+  -
+    target_type: taxonomy_term
+    target_uuid: a03d48d3-6a42-4174-92b8-4d8660aed220
+field_mime_type:
+  -
+    value: application/pdf
+field_original_name: {  }
+_content_sync:
+  entity_type: media
+  entity_dependencies:
+    user:
+      - user.user.3cceca39-f107-43da-8c9f-f0fa655c0195
+    file:
+      - file.file.5a0c1887-4506-4472-850c-866cfe34e8c3
+      - file.file.2286aeda-75c0-44d8-bfeb-12bb4dcd534b
+    node:
+      - node.islandora_object.934a2466-7c8c-4344-b021-ff405685bb79
+    taxonomy_term:
+      - taxonomy_term.islandora_media_use.27f2b03b-45e2-4822-a696-b79effb6d9bd
+      - taxonomy_term.islandora_media_use.a03d48d3-6a42-4174-92b8-4d8660aed220

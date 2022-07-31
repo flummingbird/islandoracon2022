@@ -1,0 +1,73 @@
+uuid:
+  -
+    value: bccadba9-b88c-4235-8b50-cd66e034e482
+langcode:
+  -
+    value: en
+vid:
+  -
+    target_id: islandora_media_use
+    target_type: taxonomy_vocabulary
+    target_uuid: e39bfd39-a67b-4041-ad5c-b0ca8ff34573
+revision_created:
+  -
+    value: '2022-07-30T21:00:38+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log_message: {  }
+status:
+  -
+    value: true
+name:
+  -
+    value: 'FITS File'
+description:
+  -
+    value: 'Technical Metadata associated with an original media file'
+    format: basic_html
+    processed: 'Technical Metadata associated with an original media file'
+weight:
+  -
+    value: 0
+parent:
+  -
+    target_id: 0
+changed:
+  -
+    value: '2022-07-30T21:00:38+00:00'
+    format: 'Y-m-d\TH:i:sP'
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+path:
+  -
+    alias: null
+    pid: null
+    langcode: en
+content_translation_source:
+  -
+    value: und
+content_translation_outdated:
+  -
+    value: false
+content_translation_uid:
+  -
+    target_type: user
+    target_uuid: 3cceca39-f107-43da-8c9f-f0fa655c0195
+content_translation_created:
+  -
+    value: '2020-11-03T12:42:58+00:00'
+    format: 'Y-m-d\TH:i:sP'
+field_external_uri:
+  -
+    uri: 'https://projects.iq.harvard.edu/fits'
+    title: ''
+    options: {  }
+_content_sync:
+  entity_type: taxonomy_term
+  entity_dependencies:
+    user:
+      - user.user.3cceca39-f107-43da-8c9f-f0fa655c0195

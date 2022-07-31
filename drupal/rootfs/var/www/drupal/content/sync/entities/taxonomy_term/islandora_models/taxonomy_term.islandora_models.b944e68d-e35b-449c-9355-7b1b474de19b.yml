@@ -1,0 +1,73 @@
+uuid:
+  -
+    value: b944e68d-e35b-449c-9355-7b1b474de19b
+langcode:
+  -
+    value: en
+vid:
+  -
+    target_id: islandora_models
+    target_type: taxonomy_vocabulary
+    target_uuid: 90a9a53d-844c-4084-8577-493bad47709a
+revision_created:
+  -
+    value: '2022-07-30T21:00:38+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log_message: {  }
+status:
+  -
+    value: true
+name:
+  -
+    value: Citation
+description:
+  -
+    value: null
+    format: null
+    processed: ''
+weight:
+  -
+    value: 0
+parent:
+  -
+    target_id: 0
+changed:
+  -
+    value: '2022-07-30T21:00:38+00:00'
+    format: 'Y-m-d\TH:i:sP'
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+path:
+  -
+    alias: null
+    pid: null
+    langcode: en
+content_translation_source:
+  -
+    value: und
+content_translation_outdated:
+  -
+    value: false
+content_translation_uid:
+  -
+    target_type: user
+    target_uuid: 3cceca39-f107-43da-8c9f-f0fa655c0195
+content_translation_created:
+  -
+    value: '2021-05-12T11:44:18+00:00'
+    format: 'Y-m-d\TH:i:sP'
+field_external_uri:
+  -
+    uri: 'http://vocab.getty.edu/aat/300311705'
+    title: ''
+    options: {  }
+_content_sync:
+  entity_type: taxonomy_term
+  entity_dependencies:
+    user:
+      - user.user.3cceca39-f107-43da-8c9f-f0fa655c0195

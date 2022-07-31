@@ -1,0 +1,116 @@
+uuid:
+  -
+    value: a30c078b-a51e-4097-85a8-bcfa4789429a
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: islandora_object
+    target_type: node_type
+    target_uuid: eb17ce3b-e217-4813-9fb9-4828314bffa9
+revision_timestamp:
+  -
+    value: '2022-07-31T14:39:11+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_uid:
+  -
+    target_type: user
+    target_uuid: 3cceca39-f107-43da-8c9f-f0fa655c0195
+revision_log: {  }
+status:
+  -
+    value: true
+uid:
+  -
+    target_type: user
+    target_uuid: 3cceca39-f107-43da-8c9f-f0fa655c0195
+title:
+  -
+    value: 'Sample Image'
+created:
+  -
+    value: '2022-07-31T14:19:49+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2022-07-31T14:39:11+00:00'
+    format: 'Y-m-d\TH:i:sP'
+promote:
+  -
+    value: true
+sticky:
+  -
+    value: false
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+content_translation_source:
+  -
+    value: und
+content_translation_outdated:
+  -
+    value: false
+field_abstract: {  }
+field_alt_title: {  }
+field_classification: {  }
+field_coordinates: {  }
+field_coordinates_text: {  }
+field_copyright_date: {  }
+field_date_captured: {  }
+field_date_modified: {  }
+field_date_valid: {  }
+field_description: {  }
+field_dewey_classification: {  }
+field_display_hints:
+  -
+    target_type: taxonomy_term
+    target_uuid: 10780947-a16e-48a4-9aad-02ffaa806793
+field_edition: {  }
+field_edtf_date: {  }
+field_edtf_date_created: {  }
+field_edtf_date_issued: {  }
+field_extent:
+  -
+    value: '1 item'
+field_frequency: {  }
+field_full_title: {  }
+field_genre: {  }
+field_geographic_subject: {  }
+field_identifier: {  }
+field_isbn: {  }
+field_language: {  }
+field_lcc_classification: {  }
+field_linked_agent: {  }
+field_local_identifier: {  }
+field_member_of: {  }
+field_model:
+  -
+    target_type: taxonomy_term
+    target_uuid: ef11762b-5896-4a7e-96d1-0893a458f21c
+field_mode_of_issuance: {  }
+field_note: {  }
+field_oclc_number: {  }
+field_physical_form: {  }
+field_pid: {  }
+field_place_published: {  }
+field_place_published_country: {  }
+field_resource_type: {  }
+field_rights: {  }
+field_subject: {  }
+field_subjects_name: {  }
+field_subject_general: {  }
+field_table_of_contents: {  }
+field_temporal_subject: {  }
+field_weight: {  }
+_content_sync:
+  entity_type: node
+  entity_dependencies:
+    user:
+      - user.user.3cceca39-f107-43da-8c9f-f0fa655c0195
+    taxonomy_term:
+      - taxonomy_term.islandora_display.10780947-a16e-48a4-9aad-02ffaa806793
+      - taxonomy_term.islandora_models.ef11762b-5896-4a7e-96d1-0893a458f21c

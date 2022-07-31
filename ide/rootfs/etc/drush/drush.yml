@@ -1,0 +1,6 @@
+options:
+    uri: 'http://drupal.traefik.me'
+drush:
+  paths:
+    include:
+      - '/usr/share/drush/'

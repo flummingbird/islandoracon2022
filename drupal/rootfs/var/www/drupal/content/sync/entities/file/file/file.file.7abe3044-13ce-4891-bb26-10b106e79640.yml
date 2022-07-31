@@ -1,0 +1,42 @@
+uuid:
+  -
+    value: 7abe3044-13ce-4891-bb26-10b106e79640
+langcode:
+  -
+    value: en
+uid:
+  -
+    target_type: user
+    target_uuid: 3cceca39-f107-43da-8c9f-f0fa655c0195
+filename:
+  -
+    value: almsivi.jpg
+uri:
+  -
+    value: 'fedora://2022-07/almsivi.jpg'
+    url: /_flysystem/fedora/2022-07/almsivi.jpg
+filemime:
+  -
+    value: image/jpeg
+filesize:
+  -
+    value: 358020
+status:
+  -
+    value: true
+created:
+  -
+    value: '2022-07-31T14:20:17+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2022-07-31T14:20:31+00:00'
+    format: 'Y-m-d\TH:i:sP'
+sha1:
+  -
+    value: c234bb8e6526adf16352365bc05520a1d2763a69
+_content_sync:
+  entity_type: file
+  entity_dependencies:
+    user:
+      - user.user.3cceca39-f107-43da-8c9f-f0fa655c0195

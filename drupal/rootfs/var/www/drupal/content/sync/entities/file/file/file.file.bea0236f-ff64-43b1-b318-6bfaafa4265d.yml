@@ -1,0 +1,42 @@
+uuid:
+  -
+    value: bea0236f-ff64-43b1-b318-6bfaafa4265d
+langcode:
+  -
+    value: en
+uid:
+  -
+    target_type: user
+    target_uuid: 3cceca39-f107-43da-8c9f-f0fa655c0195
+filename:
+  -
+    value: '2-Thumbnail Image.png'
+uri:
+  -
+    value: 'public://2022-07/2-Thumbnail Image.png'
+    url: /sites/default/files/2022-07/2-Thumbnail%20Image.png
+filemime:
+  -
+    value: image/png
+filesize:
+  -
+    value: 8241
+status:
+  -
+    value: true
+created:
+  -
+    value: '2022-07-31T14:45:09+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2022-07-31T14:45:09+00:00'
+    format: 'Y-m-d\TH:i:sP'
+sha1:
+  -
+    value: f4ffdf0a6db97c27ec171752319bd4ea27fa34aa
+_content_sync:
+  entity_type: file
+  entity_dependencies:
+    user:
+      - user.user.3cceca39-f107-43da-8c9f-f0fa655c0195

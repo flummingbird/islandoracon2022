@@ -1,0 +1,74 @@
+uuid:
+  -
+    value: f0c21156-20f7-48c0-8280-7393918589b7
+langcode:
+  -
+    value: en
+vid:
+  -
+    target_id: islandora_models
+    target_type: taxonomy_vocabulary
+    target_uuid: 90a9a53d-844c-4084-8577-493bad47709a
+revision_created:
+  -
+    value: '2022-07-30T21:00:38+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log_message: {  }
+status:
+  -
+    value: true
+name:
+  -
+    value: 'Paged Content'
+description:
+  -
+    value: 'An Electronic Book, object with pages'
+    format: basic_html
+    processed: 'An Electronic Book, object with pages'
+weight:
+  -
+    value: 0
+parent:
+  -
+    target_id: 0
+changed:
+  -
+    value: '2022-07-30T21:00:38+00:00'
+    format: 'Y-m-d\TH:i:sP'
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+path:
+  -
+    alias: null
+    pid: null
+    langcode: en
+content_translation_source:
+  -
+    value: und
+content_translation_outdated:
+  -
+    value: false
+content_translation_uid:
+  -
+    target_id: 0
+    target_type: user
+    target_uuid: 0d89532b-9ba1-4023-947c-06f59fd04fb3
+content_translation_created:
+  -
+    value: '2020-10-30T15:03:50+00:00'
+    format: 'Y-m-d\TH:i:sP'
+field_external_uri:
+  -
+    uri: 'https://schema.org/Book'
+    title: ''
+    options: {  }
+_content_sync:
+  entity_type: taxonomy_term
+  entity_dependencies:
+    user:
+      - user.user.0d89532b-9ba1-4023-947c-06f59fd04fb3

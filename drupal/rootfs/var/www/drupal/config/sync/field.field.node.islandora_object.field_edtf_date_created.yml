@@ -1,0 +1,23 @@
+uuid: 14081f76-49b0-45a9-a64d-2362a75bad24
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_edtf_date_created
+    - node.type.islandora_object
+  module:
+    - controlled_access_terms
+_core:
+  default_config_hash: az1ueHHmVIOW8aWHwzZYT0SNhvvnBeQF34XPs59BV7U
+id: node.islandora_object.field_edtf_date_created
+field_name: field_edtf_date_created
+entity_type: node
+bundle: islandora_object
+label: 'Date Created'
+description: 'Date of creation of the resource'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: edtf

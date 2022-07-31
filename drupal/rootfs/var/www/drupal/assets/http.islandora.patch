@@ -1,0 +1,22 @@
+diff --git a/src/EventSubscriber/JwtEventSubscriber.php b/src/EventSubscriber/JwtEventSubscriber.php
+index 153187f6..58bb1f58 100644
+--- a/src/EventSubscriber/JwtEventSubscriber.php
++++ b/src/EventSubscriber/JwtEventSubscriber.php
+@@ -87,7 +87,7 @@ class JwtEventSubscriber implements EventSubscriberInterface {
+    *   The event.
+    */
+   public function setIslandoraClaims(JwtAuthGenerateEvent $event) {
+-    global $base_secure_url;
++    global $base_url;
+ 
+     // Standard claims, validated at JWT validation time.
+     $event->addClaim('iat', time());
+@@ -96,7 +96,7 @@ class JwtEventSubscriber implements EventSubscriberInterface {
+     $expiry = $expiry_setting ? $expiry_setting : '+2 hour';
+     $event->addClaim('exp', strtotime($expiry));
+     $event->addClaim('webid', $this->currentUser->id());
+-    $event->addClaim('iss', $base_secure_url);
++    $event->addClaim('iss', $base_url);
+ 
+     // Islandora claims we need to validate.
+     $event->addClaim('sub', $this->currentUser->getAccountName());

@@ -1,0 +1,309 @@
+uuid: 97e88019-f9be-4eca-8a2b-371ac7b4e077
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - filter.format.restricted_html
+    - media.type.audio
+    - media.type.document
+    - media.type.extracted_text
+    - media.type.file
+    - media.type.image
+    - media.type.video
+    - node.type.article
+    - node.type.islandora_object
+    - node.type.page
+    - rest.resource.oai_pmh
+    - taxonomy.vocabulary.corporate_body
+    - taxonomy.vocabulary.country
+    - taxonomy.vocabulary.family
+    - taxonomy.vocabulary.frequencies
+    - taxonomy.vocabulary.genre
+    - taxonomy.vocabulary.geo_location
+    - taxonomy.vocabulary.islandora_display
+    - taxonomy.vocabulary.islandora_media_use
+    - taxonomy.vocabulary.islandora_models
+    - taxonomy.vocabulary.issuance_modes
+    - taxonomy.vocabulary.language
+    - taxonomy.vocabulary.person
+    - taxonomy.vocabulary.physical_form
+    - taxonomy.vocabulary.resource_types
+    - taxonomy.vocabulary.subject
+    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.temporal_subjects
+  module:
+    - action
+    - block
+    - block_content
+    - config
+    - contact
+    - content_sync
+    - content_translation
+    - context_ui
+    - contextual
+    - devel
+    - field_permissions
+    - field_ui
+    - file
+    - file_replace
+    - filter
+    - flysystem
+    - geolocation
+    - image
+    - islandora
+    - jwt
+    - key
+    - language
+    - media
+    - node
+    - path
+    - rest
+    - search_api
+    - shortcut
+    - system
+    - taxonomy
+    - toolbar
+    - tour
+    - update
+    - views_ui
+_core:
+  default_config_hash: e6W733rBSNmewsIQsvWQ-8mIE5H-CIeArLBwIbN5vVQ
+id: fedoraadmin
+label: fedoraAdmin
+weight: 3
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access devel information'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access private fields'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access tour'
+  - 'access user contact forms'
+  - 'access user profiles'
+  - 'administer account settings'
+  - 'administer actions'
+  - 'administer block_content display'
+  - 'administer block_content fields'
+  - 'administer block_content form display'
+  - 'administer blocks'
+  - 'administer contact forms'
+  - 'administer contact_message display'
+  - 'administer contact_message fields'
+  - 'administer contact_message form display'
+  - 'administer content translation'
+  - 'administer content types'
+  - 'administer contexts'
+  - 'administer display modes'
+  - 'administer field permissions'
+  - 'administer filters'
+  - 'administer flysystem'
+  - 'administer image styles'
+  - 'administer jwt'
+  - 'administer key configuration overrides'
+  - 'administer keys'
+  - 'administer languages'
+  - 'administer media'
+  - 'administer media display'
+  - 'administer media fields'
+  - 'administer media form display'
+  - 'administer media types'
+  - 'administer menu'
+  - 'administer modules'
+  - 'administer node display'
+  - 'administer node fields'
+  - 'administer node form display'
+  - 'administer nodes'
+  - 'administer permissions'
+  - 'administer rest resources'
+  - 'administer search_api'
+  - 'administer shortcuts'
+  - 'administer site configuration'
+  - 'administer software updates'
+  - 'administer taxonomy'
+  - 'administer taxonomy_term display'
+  - 'administer taxonomy_term fields'
+  - 'administer taxonomy_term form display'
+  - 'administer themes'
+  - 'administer url aliases'
+  - 'administer user display'
+  - 'administer user fields'
+  - 'administer user form display'
+  - 'administer users'
+  - 'administer views'
+  - 'bypass node access'
+  - 'cancel account'
+  - 'change own username'
+  - 'configure geolocation'
+  - 'create article content'
+  - 'create audio media'
+  - 'create content translations'
+  - 'create document media'
+  - 'create extracted_text media'
+  - 'create file media'
+  - 'create image media'
+  - 'create islandora_object content'
+  - 'create media'
+  - 'create page content'
+  - 'create terms in corporate_body'
+  - 'create terms in country'
+  - 'create terms in family'
+  - 'create terms in frequencies'
+  - 'create terms in genre'
+  - 'create terms in geo_location'
+  - 'create terms in islandora_display'
+  - 'create terms in islandora_media_use'
+  - 'create terms in islandora_models'
+  - 'create terms in issuance_modes'
+  - 'create terms in language'
+  - 'create terms in person'
+  - 'create terms in physical_form'
+  - 'create terms in resource_types'
+  - 'create terms in subject'
+  - 'create terms in tags'
+  - 'create terms in temporal_subjects'
+  - 'create url aliases'
+  - 'create video media'
+  - 'customize shortcut links'
+  - 'delete all revisions'
+  - 'delete any article content'
+  - 'delete any audio media'
+  - 'delete any document media'
+  - 'delete any extracted_text media'
+  - 'delete any file media'
+  - 'delete any image media'
+  - 'delete any islandora_object content'
+  - 'delete any media'
+  - 'delete any page content'
+  - 'delete any video media'
+  - 'delete article revisions'
+  - 'delete content translations'
+  - 'delete islandora_object revisions'
+  - 'delete media'
+  - 'delete own article content'
+  - 'delete own audio media'
+  - 'delete own document media'
+  - 'delete own extracted_text media'
+  - 'delete own file media'
+  - 'delete own image media'
+  - 'delete own islandora_object content'
+  - 'delete own page content'
+  - 'delete own video media'
+  - 'delete page revisions'
+  - 'delete terms in corporate_body'
+  - 'delete terms in country'
+  - 'delete terms in family'
+  - 'delete terms in frequencies'
+  - 'delete terms in genre'
+  - 'delete terms in geo_location'
+  - 'delete terms in islandora_display'
+  - 'delete terms in islandora_media_use'
+  - 'delete terms in islandora_models'
+  - 'delete terms in issuance_modes'
+  - 'delete terms in language'
+  - 'delete terms in person'
+  - 'delete terms in physical_form'
+  - 'delete terms in resource_types'
+  - 'delete terms in subject'
+  - 'delete terms in tags'
+  - 'delete terms in temporal_subjects'
+  - 'edit any article content'
+  - 'edit any audio media'
+  - 'edit any document media'
+  - 'edit any extracted_text media'
+  - 'edit any file media'
+  - 'edit any image media'
+  - 'edit any islandora_object content'
+  - 'edit any page content'
+  - 'edit any video media'
+  - 'edit own article content'
+  - 'edit own audio media'
+  - 'edit own document media'
+  - 'edit own extracted_text media'
+  - 'edit own file media'
+  - 'edit own image media'
+  - 'edit own islandora_object content'
+  - 'edit own page content'
+  - 'edit own video media'
+  - 'edit terms in corporate_body'
+  - 'edit terms in country'
+  - 'edit terms in family'
+  - 'edit terms in frequencies'
+  - 'edit terms in genre'
+  - 'edit terms in geo_location'
+  - 'edit terms in islandora_display'
+  - 'edit terms in islandora_media_use'
+  - 'edit terms in islandora_models'
+  - 'edit terms in issuance_modes'
+  - 'edit terms in language'
+  - 'edit terms in person'
+  - 'edit terms in physical_form'
+  - 'edit terms in resource_types'
+  - 'edit terms in subject'
+  - 'edit terms in tags'
+  - 'edit terms in temporal_subjects'
+  - 'export configuration'
+  - 'export content'
+  - 'import configuration'
+  - 'import content'
+  - 'link to any page'
+  - 'logs content'
+  - 'manage media'
+  - 'manage members'
+  - 'replace files'
+  - 'restful get oai_pmh'
+  - 'restful post oai_pmh'
+  - 'revert all revisions'
+  - 'revert article revisions'
+  - 'revert islandora_object revisions'
+  - 'revert page revisions'
+  - 'select account cancellation method'
+  - 'switch shortcut sets'
+  - 'switch users'
+  - 'synchronize configuration'
+  - 'synchronize content'
+  - 'translate any entity'
+  - 'translate audio media'
+  - 'translate corporate_body taxonomy_term'
+  - 'translate country taxonomy_term'
+  - 'translate editable entities'
+  - 'translate family taxonomy_term'
+  - 'translate file media'
+  - 'translate frequencies taxonomy_term'
+  - 'translate genre taxonomy_term'
+  - 'translate geo_location taxonomy_term'
+  - 'translate image media'
+  - 'translate islandora_media_use taxonomy_term'
+  - 'translate islandora_models taxonomy_term'
+  - 'translate islandora_object node'
+  - 'translate issuance_modes taxonomy_term'
+  - 'translate language taxonomy_term'
+  - 'translate person taxonomy_term'
+  - 'translate physical_form taxonomy_term'
+  - 'translate resource_types taxonomy_term'
+  - 'translate subject taxonomy_term'
+  - 'translate temporal_subjects taxonomy_term'
+  - 'translate video media'
+  - 'update any media'
+  - 'update content translations'
+  - 'update media'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view article revisions'
+  - 'view checksums'
+  - 'view islandora_object revisions'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view page revisions'
+  - 'view the administration theme'
+  - 'view update notifications'
+  - 'view user email addresses'

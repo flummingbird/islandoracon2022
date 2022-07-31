@@ -1,0 +1,281 @@
+---
+version: "3.8"
+
+# Common to all services
+x-common: &common
+  restart: "no"
+
+# Common build settings
+x-build-common: &build-common
+  args:
+    repository: ${ISLE_BUILDKIT_REPOSITORY}
+    tag: ${ISLE_BUILDKIT_TAG}
+  x-bake:
+    platforms:
+      - linux/amd64
+      - linux/arm64
+
+networks:
+  default:
+
+volumes:
+  activemq-data: {}
+  blazegraph-data: {}
+  cantaloupe-data: {}
+  code-server-data: {}
+  drupal-private-files: {}
+  drupal-public-files: {}
+  drupal-root: {}
+  fcrepo-data: {}
+  mariadb-data: {}
+  matomo-config-data: {}
+  solr-data: {}
+  traefik-acme: {}
+
+services:
+  alpaca:
+    <<: *common
+    container_name: alpaca
+    image: ${ISLE_BUILDKIT_REPOSITORY}/alpaca:${ISLE_BUILDKIT_TAG}
+    environment:
+      ALPACA_ACTIVEMQ_CONNECTIONS: 20
+      ALPACA_ACTIVEMQ_CONSUMERS: 8
+  crayfits:
+    <<: *common
+    container_name: crayfits
+    image: ${ISLE_BUILDKIT_REPOSITORY}/crayfits:${ISLE_BUILDKIT_TAG}
+  fits:
+    <<: *common
+    container_name: fits
+    image: ${ISLE_BUILDKIT_REPOSITORY}/fits:${ISLE_BUILDKIT_TAG}
+  homarus:
+    <<: *common
+    container_name: homarus
+    image: ${ISLE_BUILDKIT_REPOSITORY}/homarus:${ISLE_BUILDKIT_TAG}
+  houdini:
+    <<: *common
+    container_name: houdini
+    image: ${ISLE_BUILDKIT_REPOSITORY}/houdini:${ISLE_BUILDKIT_TAG}
+  hypercube:
+    <<: *common
+    container_name: hypercube
+    image: ${ISLE_BUILDKIT_REPOSITORY}/hypercube:${ISLE_BUILDKIT_TAG}
+  mariadb:
+    <<: *common
+    container_name: mariadb
+    image: ${ISLE_BUILDKIT_REPOSITORY}/mariadb:${ISLE_BUILDKIT_TAG}
+    volumes:
+      - mariadb-data:/var/lib/mysql:rw
+  milliner:
+    <<: *common
+    container_name: milliner
+    image: ${ISLE_BUILDKIT_REPOSITORY}/milliner:${ISLE_BUILDKIT_TAG}
+  activemq:
+    <<: *common
+    container_name: activemq
+    image: ${ISLE_BUILDKIT_REPOSITORY}/activemq:${ISLE_BUILDKIT_TAG}
+    labels:
+      traefik.enable: true
+      traefik.http.routers.activemq_http.entrypoints: http
+      traefik.http.routers.activemq_http.service: activemq
+      traefik.http.services.activemq.loadbalancer.server.port: 8161
+      traefik.subdomain: activemq
+    volumes:
+      - activemq-data:/opt/activemq/data:rw
+  blazegraph:
+    <<: *common
+    container_name: blazegraph
+    image: ${ISLE_BUILDKIT_REPOSITORY}/blazegraph:${ISLE_BUILDKIT_TAG}
+    labels:
+      traefik.enable: true
+      traefik.http.routers.blazegraph_http.entrypoints: http
+      traefik.http.routers.blazegraph_http.service: blazegraph
+      traefik.http.services.blazegraph.loadbalancer.server.port: 8080
+    volumes:
+      # Triplestore storage.
+      - blazegraph-data:/data:rw
+  cantaloupe:
+    <<: *common
+    container_name: cantaloupe
+    image: ${ISLE_BUILDKIT_REPOSITORY}/cantaloupe:${ISLE_BUILDKIT_TAG}
+    labels:
+      traefik.enable: true
+      traefik.http.routers.cantaloupe_http.entrypoints: http
+      traefik.http.routers.cantaloupe_http.rule: Host(`drupal.traefik.me`) && PathPrefix(`/cantaloupe`)
+      traefik.http.routers.cantaloupe_http.service: cantaloupe
+      traefik.http.services.cantaloupe.loadbalancer.server.port: 8080
+    volumes:
+      - cantaloupe-data:/data:rw
+  drupal:
+    <<: *common
+    container_name: drupal
+    image: ${REPOSITORY}/islandoracon2022-drupal:${TAG}
+    environment: &drupal-environment
+      DRUPAL_DEFAULT_BROKER_URL: "tcp://activemq:61613"
+      DRUPAL_DEFAULT_CANTALOUPE_URL: "http://drupal.traefik.me/cantaloupe/iiif/2"
+      DRUPAL_DEFAULT_CONFIGDIR: "/var/www/drupal/config/sync"
+      DRUPAL_DEFAULT_FCREPO_HOST: "fcrepo"
+      DRUPAL_DEFAULT_FCREPO_PORT: 8080
+      DRUPAL_DEFAULT_FCREPO_URL: "http://fcrepo.traefik.me/fcrepo/rest/"
+      DRUPAL_DEFAULT_INSTALL_EXISTING_CONFIG: "true"
+      DRUPAL_DEFAULT_MATOMO_URL: "http://drupal.traefik.me/matomo/"
+      DRUPAL_DEFAULT_NAME: "Islandora Digital Collections"
+      DRUPAL_DEFAULT_PROFILE: "minimal"
+      DRUPAL_DEFAULT_SALT: ${DRUPAL_DEFAULT_SALT}
+      DRUPAL_DEFAULT_SITE_URL: "drupal.traefik.me"
+      DRUPAL_DEFAULT_SOLR_CORE: "default"
+      DRUPAL_DRUSH_URI: "http://drupal.traefik.me"
+    volumes:
+      # Allow code-server to serve Drupal / override it.
+      - &drupal-root
+        type: volume
+        source: drupal-root
+        target: /var/www/drupal
+      - &drupal-public-files
+        type: volume
+        source: drupal-public-files
+        target: /var/www/drupal/web/sites/default/files
+      - &drupal-private-files
+        type: volume
+        source: drupal-public-files
+        target: /var/www/drupal/private
+    build:
+      <<: *build-common
+      context: ./drupal
+  fcrepo:
+    <<: *common
+    container_name: fcrepo
+    image: ${ISLE_BUILDKIT_REPOSITORY}/fcrepo6:${ISLE_BUILDKIT_TAG}
+    environment:
+      FCREPO_ALLOW_EXTERNAL_DEFAULT: "http://default/"
+      FCREPO_ALLOW_EXTERNAL_SITE: "http://drupal.traefik.me/"
+    labels:
+      traefik.enable: true
+      traefik.http.routers.fcrepo_http.entrypoints: http
+      traefik.http.routers.fcrepo_http.service: fcrepo
+      traefik.http.services.fcrepo.loadbalancer.server.port: 8080
+    volumes:
+      # Repository data.
+      - fcrepo-data:/data
+    depends_on:
+      - activemq
+  matomo:
+    <<: *common
+    container_name: matomo
+    image: ${ISLE_BUILDKIT_REPOSITORY}/matomo:${ISLE_BUILDKIT_TAG}
+    labels:
+      traefik.enable: true
+      traefik.http.middlewares.matomo-customrequestheaders.headers.customrequestheaders.X-Forwarded-Uri: /matomo
+      traefik.http.middlewares.matomo-stripprefix.stripprefix.prefixes: /matomo
+      traefik.http.middlewares.matomo.chain.middlewares: matomo-stripprefix,matomo-customrequestheaders
+      traefik.http.routers.matomo_http.entrypoints: http
+      traefik.http.routers.matomo_http.middlewares: matomo
+      traefik.http.routers.matomo_http.rule: Host(`drupal.traefik.me`) && PathPrefix(`/matomo`)
+      traefik.http.routers.matomo_http.service: matomo
+      traefik.http.services.matomo.loadbalancer.server.port: 80
+    environment:
+      MATOMO_DEFAULT_HOST: "http://drupal.traefik.me"
+    volumes:
+      - matomo-config-data:/var/www/matomo:rw
+  solr:
+    <<: *common
+    container_name: solr
+    image: ${REPOSITORY}/islandoracon2022-solr:${TAG}
+    labels:
+      traefik.enable: true
+      traefik.http.routers.solr_http.entrypoints: http
+      traefik.http.routers.solr_http.service: solr
+      traefik.http.services.solr.loadbalancer.server.port: 8983
+    volumes:
+      - solr-data:/data:rw
+    build:
+      <<: *build-common
+      context: ./solr
+  traefik:
+    <<: *common
+    container_name: traefik
+    image: traefik:v2.6.1
+    command: >-
+      --api.insecure=true
+      --api.dashboard=true
+      --api.debug=true
+      --entryPoints.http.address=:80
+      --providers.docker=true
+      --providers.docker.network=default
+      --providers.docker.exposedByDefault=false
+      '--providers.docker.defaultRule=Host(`{{index .Labels "com.docker.compose.service" }}.traefik.me`)'
+    labels:
+      traefik.enable: true
+      traefik.http.routers.traefik_http.entrypoints: http
+      traefik.http.routers.traefik_http.service: traefik
+      traefik.http.services.traefik.loadbalancer.server.port: 8080
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      default:
+        aliases:
+          # Allow services to connect on the same name/port as the outside.
+          - drupal.traefik.me
+          - fcrepo.traefik.me
+          - solr.traefik.me
+    depends_on:
+      # Sometimes traefik doesn't pick up on new containers so make sure they are started before traefik.
+      - activemq
+      - blazegraph
+      - drupal
+      - fcrepo
+      - ide
+      - solr
+  ide:
+    <<: *common
+    container_name: ide
+    image: ${REPOSITORY}/islandoracon2022-ide:${TAG}
+    labels:
+      traefik.enable: true
+      traefik.http.routers.drupal_http.entrypoints: http
+      traefik.http.routers.drupal_http.rule: Host(`drupal.traefik.me`)
+      traefik.http.routers.drupal_http.service: drupal
+      traefik.http.services.drupal.loadbalancer.server.port: 80
+      traefik.http.routers.ide_http.entrypoints: http
+      traefik.http.routers.ide_http.service: ide
+      traefik.http.services.ide.loadbalancer.server.port: 8443
+    environment:
+      <<: *drupal-environment
+      CODE_SERVER_AUTHENTICATION: none
+      NGINX_CLIENT_BODY_TIMEOUT: 600s
+      NGINX_FASTCGI_CONNECT_TIMEOUT: 600s
+      NGINX_FASTCGI_READ_TIMEOUT: 1200s
+      NGINX_FASTCGI_SEND_TIMEOUT: 600s
+      NGINX_KEEPALIVE_TIMEOUT: 750s
+      NGINX_LINGERING_TIMEOUT: 50s
+      NGINX_PROXY_CONNECT_TIMEOUT: 600s
+      NGINX_PROXY_READ_TIMEOUT: 600s
+      NGINX_PROXY_SEND_TIMEOUT: 600s
+      NGINX_SEND_TIMEOUT: 600s
+      PHP_DEFAULT_SOCKET_TIMEOUT: 600
+      PHP_MAX_EXECUTION_TIME: 300
+      PHP_MAX_INPUT_TIME: 600
+      PHP_PROCESS_CONTROL_TIMEOUT: 600
+      PHP_REQUEST_TERMINATE_TIMEOUT: 600
+    build:
+      <<: *build-common
+      context: ./ide
+    volumes:
+      # Mount and serve contents of Drupal site.
+      - <<: *drupal-root
+        volume:
+          nocopy: true
+      # Mount and serve Drupal public files.
+      - <<: *drupal-public-files
+        volume:
+          nocopy: true
+      # Mount and serve Drupal private files.
+      - <<: *drupal-private-files
+        volume:
+          nocopy: true
+      # Volumes for code-server cache.
+      - type: volume
+        source: code-server-data
+        target: /opt/code-server/data

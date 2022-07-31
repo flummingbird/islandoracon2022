@@ -1,0 +1,7 @@
+# Editor configuration / Temporary files.
+*~
+# Ignore per / user customizations.
+docker-compose.override.yml
+# Ignore files created by composer if running on host
+drupal/rootfs/var/www/drupal/vendor
+drupal/rootfs/var/www/drupal/web

@@ -1,0 +1,39 @@
+uuid: a8430a87-1f1f-414d-b91a-27758b63e0d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.frequencies.field_authority_link
+    - taxonomy.vocabulary.frequencies
+  module:
+    - controlled_access_terms
+    - text
+_core:
+  default_config_hash: 7VmnAl6W-srQIwcGpbYTMLkwd9fRlf3lhPvjTmbC1Y8
+id: taxonomy_term.frequencies.default
+targetEntityType: taxonomy_term
+bundle: frequencies
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_authority_link:
+    type: authority_formatter_default
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: _blank
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

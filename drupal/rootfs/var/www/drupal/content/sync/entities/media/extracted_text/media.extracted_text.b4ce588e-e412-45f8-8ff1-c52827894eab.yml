@@ -1,0 +1,127 @@
+uuid:
+  -
+    value: b4ce588e-e412-45f8-8ff1-c52827894eab
+langcode:
+  -
+    value: en
+bundle:
+  -
+    target_id: extracted_text
+    target_type: media_type
+    target_uuid: d3bbaec7-b9f8-43f6-a16d-0d26a505c8e1
+revision_created:
+  -
+    value: '2022-07-31T14:45:08+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log_message: {  }
+status:
+  -
+    value: true
+uid:
+  -
+    target_type: user
+    target_uuid: 3cceca39-f107-43da-8c9f-f0fa655c0195
+name:
+  -
+    value: '2-Extracted Text.txt'
+thumbnail:
+  -
+    alt: ''
+    title: null
+    width: 180
+    height: 180
+    target_type: file
+    target_uuid: 5a0c1887-4506-4472-850c-866cfe34e8c3
+created:
+  -
+    value: '2022-07-31T14:45:08+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2022-07-31T14:45:08+00:00'
+    format: 'Y-m-d\TH:i:sP'
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+path:
+  -
+    alias: null
+    pid: null
+    langcode: en
+content_translation_source:
+  -
+    value: und
+content_translation_outdated:
+  -
+    value: false
+field_edited_text:
+  -
+    value: |-
+      A Simple PDF File<br />
+      This is a small demonstration .pdf file just for use in the Virtual Mechanics tutorials. More text. And more<br />
+      text. And more text. And more text. And more text.<br />
+      And more text. And more text. And more text. And more text. And more<br />
+      text. And more text. Boring, zzzzz. And more text. And more text. And<br />
+      more text. And more text. And more text. And more text. And more text.<br />
+      And more text. And more text.<br />
+      And more text. And more text. And more text. And more text. And more<br />
+      text. And more text. And more text. Even more. Continued on page 2 ...<br />
+      <br />
+      Simple PDF File 2<br />
+      ...continued from page 1. Yet more text. And more text. And more text.<br />
+      And more text. And more text. And more text. And more text. And more<br />
+      text. Oh, how boring typing this stuff. But not as boring as watching<br />
+      paint dry. And more text. And more text. And more text. And more text.<br />
+      Boring. More, a little more text. The end, and just as well.<br />
+      <br />
+      
+    format: basic_html
+    processed: |-
+      A Simple PDF File<br />
+      This is a small demonstration .pdf file just for use in the Virtual Mechanics tutorials. More text. And more<br />
+      text. And more text. And more text. And more text.<br />
+      And more text. And more text. And more text. And more text. And more<br />
+      text. And more text. Boring, zzzzz. And more text. And more text. And<br />
+      more text. And more text. And more text. And more text. And more text.<br />
+      And more text. And more text.<br />
+      And more text. And more text. And more text. And more text. And more<br />
+      text. And more text. And more text. Even more. Continued on page 2 ...<br /><br />
+      Simple PDF File 2<br />
+      ...continued from page 1. Yet more text. And more text. And more text.<br />
+      And more text. And more text. And more text. And more text. And more<br />
+      text. Oh, how boring typing this stuff. But not as boring as watching<br />
+      paint dry. And more text. And more text. And more text. And more text.<br />
+      Boring. More, a little more text. The end, and just as well.<br /><br />
+field_media_file:
+  -
+    display: null
+    description: null
+    target_type: file
+    target_uuid: 4549be96-e963-48b0-93c0-c47dc7d8ced0
+field_media_of:
+  -
+    target_type: node
+    target_uuid: 934a2466-7c8c-4344-b021-ff405685bb79
+field_media_use:
+  -
+    target_type: taxonomy_term
+    target_uuid: 8408106b-3c26-4e94-93e8-c36e76b4fd56
+field_mime_type:
+  -
+    value: text/plain
+_content_sync:
+  entity_type: media
+  entity_dependencies:
+    user:
+      - user.user.3cceca39-f107-43da-8c9f-f0fa655c0195
+    file:
+      - file.file.5a0c1887-4506-4472-850c-866cfe34e8c3
+      - file.file.4549be96-e963-48b0-93c0-c47dc7d8ced0
+    node:
+      - node.islandora_object.934a2466-7c8c-4344-b021-ff405685bb79
+    taxonomy_term:
+      - taxonomy_term.islandora_media_use.8408106b-3c26-4e94-93e8-c36e76b4fd56

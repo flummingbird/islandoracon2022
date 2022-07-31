@@ -1,0 +1,70 @@
+uuid:
+  -
+    value: bc071a8d-6c73-4772-8a38-a49402d02c77
+langcode:
+  -
+    value: en
+vid:
+  -
+    target_id: resource_types
+    target_type: taxonomy_vocabulary
+    target_uuid: 382d98af-93cd-4107-8116-5a460a17fac0
+revision_created:
+  -
+    value: '2022-07-30T21:00:38+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log_message: {  }
+status:
+  -
+    value: true
+name:
+  -
+    value: 'Still Image'
+description:
+  -
+    value: 'A static visual representation'
+    format: basic_html
+    processed: 'A static visual representation'
+weight:
+  -
+    value: 0
+parent:
+  -
+    target_id: 0
+changed:
+  -
+    value: '2022-07-30T21:00:38+00:00'
+    format: 'Y-m-d\TH:i:sP'
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+path:
+  -
+    alias: null
+    pid: null
+    langcode: en
+content_translation_source:
+  -
+    value: und
+content_translation_outdated:
+  -
+    value: false
+content_translation_uid:
+  -
+    target_id: 0
+    target_type: user
+    target_uuid: 0d89532b-9ba1-4023-947c-06f59fd04fb3
+content_translation_created:
+  -
+    value: '2020-10-30T15:03:50+00:00'
+    format: 'Y-m-d\TH:i:sP'
+field_authority_link: {  }
+_content_sync:
+  entity_type: taxonomy_term
+  entity_dependencies:
+    user:
+      - user.user.0d89532b-9ba1-4023-947c-06f59fd04fb3

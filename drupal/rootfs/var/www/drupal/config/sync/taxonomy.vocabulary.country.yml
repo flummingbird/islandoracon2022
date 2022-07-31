@@ -1,0 +1,10 @@
+uuid: 6c205682-1584-4361-9e67-ff63f2e49562
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ZmvFNlF7NGcdrtE5K7JR0KQtIt8wULJt1H47Ne_UaJM
+name: Country
+vid: country
+description: 'The MARC Code List for Countries contains a list of places and their associated two- or three-character lowercase alphabetic cod'
+weight: 0

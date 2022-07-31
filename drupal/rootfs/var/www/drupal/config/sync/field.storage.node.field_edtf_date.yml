@@ -1,0 +1,24 @@
+uuid: 6ab27af8-ac01-474e-8720-ae0302bc0c34
+langcode: en
+status: true
+dependencies:
+  module:
+    - controlled_access_terms
+    - node
+_core:
+  default_config_hash: C6RAaNDse3-eQaG8S7HMTKViyB3Q9A3G_h2GM4cwAwA
+id: node.field_edtf_date
+field_name: field_edtf_date
+entity_type: node
+type: edtf
+settings:
+  max_length: 128
+  is_ascii: false
+  case_sensitive: false
+module: controlled_access_terms
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
